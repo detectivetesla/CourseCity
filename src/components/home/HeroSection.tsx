@@ -3,7 +3,6 @@ import { Play, ArrowRight, Star, Users, BookOpen } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const HeroSection: React.FC = () => {
-    // Chaos shapes with high visibility and donut-ready types
     const chaosShapes = [
         { type: 'circle', size: 140, x: '8%', y: '15%', duration: 25, delay: 0 },
         { type: 'square', size: 80, x: '82%', y: '12%', duration: 18, delay: 2, rotate: 35 },
@@ -14,11 +13,11 @@ const HeroSection: React.FC = () => {
     ];
 
     return (
-        <section className="relative min-h-screen flex items-center pt-32 pb-24 overflow-hidden bg-[#fafafa] dark:bg-slate-950 transition-colors duration-500">
+        <section className="relative min-h-screen flex items-center pt-32 pb-24 overflow-hidden bg-[#FDFCFB] dark:bg-slate-950 transition-colors duration-500">
             {/* --- BACKGROUND DECORATIVE LAYERS --- */}
 
             {/* 1. Base Vibrant Gradient - Stronger Colors */}
-            <div className="absolute inset-0 bg-gradient-to-br from-white via-orange-100/30 to-primary/10 dark:from-slate-950 dark:via-slate-900/50 dark:to-primary/5 z-0" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#FDFCFB] via-orange-100/40 to-primary/10 dark:from-slate-950 dark:via-slate-900/50 dark:to-primary/5 z-0" />
 
             {/* 2. Organized Patterns - Increased Contrast */}
             <div className="absolute inset-0 z-0 pointer-events-none">

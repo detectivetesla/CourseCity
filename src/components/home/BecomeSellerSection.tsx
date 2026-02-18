@@ -11,7 +11,7 @@ const BecomeSellerSection: React.FC = () => {
     ];
 
     return (
-        <section className="py-24 bg-white dark:bg-slate-950 transition-colors duration-500">
+        <section className="py-24 bg-[#FDFCFB] dark:bg-slate-950 transition-colors duration-500">
             <div className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col lg:flex-row items-center gap-20">
                 <motion.div
                     initial={{ opacity: 0, x: -30 }}
@@ -44,7 +44,7 @@ const BecomeSellerSection: React.FC = () => {
                             initial={{ opacity: 0, x: 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ delay: idx * 0.1 }}
-                            className="flex items-center gap-6 p-8 bg-slate-50 dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 hover:shadow-xl dark:shadow-slate-950/50 transition-all duration-300"
+                            className="flex items-center gap-6 p-8 bg-[#F9F7F5] dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 hover:shadow-xl dark:shadow-slate-950/50 transition-all duration-300"
                         >
                             <div className={cn("w-20 h-20 rounded-2xl flex items-center justify-center text-white shrink-0 shadow-lg", benefit.color)}>
                                 <benefit.icon className="w-10 h-10" />
