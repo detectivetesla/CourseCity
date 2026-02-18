@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const TestimonialsSection: React.FC = () => {
     return (
-        <section className="py-20 bg-[#F9F7F5] dark:bg-slate-950/50 overflow-hidden transition-colors duration-500">
+        <section className="py-20 bg-[#F9F7F5] dark:bg-slate-950/50 navy:bg-[#051933] overflow-hidden transition-colors duration-500">
             <div className="max-w-7xl mx-auto px-4 md:px-8">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-primary dark:from-white dark:to-primary inline-block">

@@ -20,7 +20,7 @@ const StatsSection: React.FC = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
                         viewport={{ once: true }}
-                        className="group p-8 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-[2rem] shadow-sm hover:shadow-xl dark:shadow-slate-950/50 transition-all duration-500 text-center"
+                        className="group p-8 bg-white dark:bg-slate-900 navy:bg-[#051933] border border-slate-100 dark:border-slate-800 navy:border-indigo-900/50 rounded-[2rem] shadow-sm hover:shadow-xl dark:shadow-slate-950/50 transition-all duration-500 text-center"
                     >
                         <div className={`w-16 h-16 ${stat.color} text-white rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-6 transition-transform duration-300 shadow-lg`}>
                             <stat.icon className="w-8 h-8" />

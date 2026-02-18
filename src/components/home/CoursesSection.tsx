@@ -96,7 +96,7 @@ const CoursesSection: React.FC = () => {
         : courses.filter(c => c.category === activeCategory);
 
     return (
-        <section className="max-w-7xl mx-auto px-4 md:px-8 py-20 bg-[#FDFCFB] dark:bg-slate-950 transition-colors duration-500">
+        <section className="max-w-7xl mx-auto px-4 md:px-8 py-20 bg-[#FDFCFB] dark:bg-slate-950 navy:bg-[#020D1A] transition-colors duration-500">
             <div className="text-center mb-16 space-y-4">
                 <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">
                     All <span className="text-primary italic">Courses</span> of CourseCity

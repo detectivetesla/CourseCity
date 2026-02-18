@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 @variant dark (&:where(.dark, .dark *));
+@variant navy (&:where(.navy, .navy *));
 
 @theme {
   --font-poppins: "Poppins", sans-serif;
@@ -64,6 +65,11 @@
 
   :root.dark body {
     @apply text-slate-100 bg-slate-950;
+  }
+
+  :root.navy body {
+    background-color: #020D1A;
+    color: #F1F5F9;
   }
 }
 

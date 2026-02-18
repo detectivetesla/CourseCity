@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Bell, Mail, Sun, Moon, LogIn, UserPlus, Menu, X, ShoppingCart } from 'lucide-react';
+import { Bell, Mail, Sun, Moon, LogIn, UserPlus, Menu, X, ShoppingCart, Waves } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '../../lib/utils';
 import logoImg from '../../assets/images/Logo.png';
@@ -8,10 +8,10 @@ import logoImg from '../../assets/images/Logo.png';
 const Header: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [isDarkMode, setIsDarkMode] = useState(() => {
-        const storedTheme = localStorage.getItem('theme');
-        if (storedTheme) return storedTheme === 'dark';
-        return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const [theme, setTheme] = useState<'light' | 'dark' | 'navy'>(() => {
+        const storedTheme = localStorage.getItem('theme') as 'light' | 'dark' | 'navy';
+        if (storedTheme) return storedTheme;
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     });
 
     useEffect(() => {
@@ -19,19 +19,29 @@ const Header: React.FC = () => {
             setIsScrolled(window.scrollY > 20);
         };
 
-        if (isDarkMode) {
+        // Sync theme with document class and color scheme
+        document.documentElement.classList.remove('dark', 'navy');
+        if (theme === 'dark') {
             document.documentElement.classList.add('dark');
             document.documentElement.style.colorScheme = 'dark';
-            localStorage.setItem('theme', 'dark');
+        } else if (theme === 'navy') {
+            document.documentElement.classList.add('navy');
+            document.documentElement.style.colorScheme = 'dark';
         } else {
-            document.documentElement.classList.remove('dark');
             document.documentElement.style.colorScheme = 'light';
-            localStorage.setItem('theme', 'light');
         }
+
+        localStorage.setItem('theme', theme);
 
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [isDarkMode]);
+    }, [theme]);
+
+    const toggleTheme = () => {
+        if (theme === 'light') setTheme('dark');
+        else if (theme === 'dark') setTheme('navy');
+        else setTheme('light');
+    };
 
     const navLinks = [
         { name: 'Home', href: '#' },
@@ -94,10 +104,12 @@ const Header: React.FC = () => {
                             <Mail className="w-5 h-5 transition-transform group-hover:scale-110" />
                         </button>
                         <button
-                            onClick={() => setIsDarkMode(!isDarkMode)}
+                            onClick={toggleTheme}
                             className="p-2.5 text-primary hover:text-primary-dark bg-primary/10 hover:bg-primary/20 rounded-full transition-all duration-300 group"
                         >
-                            {isDarkMode ? <Sun className="w-5 h-5 transition-transform group-hover:rotate-45" /> : <Moon className="w-5 h-5 transition-transform group-hover:-rotate-12" />}
+                            {theme === 'light' && <Moon className="w-5 h-5 transition-transform group-hover:-rotate-12" />}
+                            {theme === 'dark' && <Waves className="w-5 h-5 transition-transform group-hover:scale-110" />}
+                            {theme === 'navy' && <Sun className="w-5 h-5 transition-transform group-hover:rotate-45" />}
                         </button>
                     </div>
 

@@ -11,7 +11,7 @@ const BecomeSellerSection: React.FC = () => {
     ];
 
     return (
-        <section className="py-24 bg-[#FDFCFB] dark:bg-slate-950 transition-colors duration-500">
+        <section className="py-24 bg-[#FDFCFB] dark:bg-slate-950 navy:bg-[#020D1A] transition-colors duration-500">
             <div className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col lg:flex-row items-center gap-20">
                 <motion.div
                     initial={{ opacity: 0, x: -30 }}

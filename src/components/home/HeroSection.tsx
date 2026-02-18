@@ -13,7 +13,7 @@ const HeroSection: React.FC = () => {
     ];
 
     return (
-        <section className="relative min-h-screen flex items-center pt-32 pb-24 overflow-hidden bg-[#FDFCFB] dark:bg-slate-950 transition-colors duration-500">
+        <section className="relative min-h-screen flex items-center pt-32 pb-24 overflow-hidden bg-[#FDFCFB] dark:bg-slate-950 navy:bg-[#020D1A] transition-colors duration-500">
             {/* --- BACKGROUND DECORATIVE LAYERS --- */}
 
             {/* 1. Base Vibrant Gradient - Stronger Colors */}
