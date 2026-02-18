@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Bell, Mail, Sun, Moon, LogIn, UserPlus, Menu, X, ShoppingCart, Waves } from 'lucide-react';
+import { Bell, Mail, Sun, Moon, LogIn, UserPlus, Menu, X, ShoppingCart, Cloud } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '../../lib/utils';
 import logoImg from '../../assets/images/Logo.png';
@@ -108,7 +108,7 @@ const Header: React.FC = () => {
                             className="p-2.5 text-purple-500 hover:text-purple-600 bg-purple-500/10 hover:bg-purple-500/20 rounded-full transition-all duration-300 group"
                         >
                             {theme === 'light' && <Moon className="w-5 h-5 transition-transform group-hover:-rotate-12" />}
-                            {theme === 'dark' && <Waves className="w-5 h-5 transition-transform group-hover:scale-110" />}
+                            {theme === 'dark' && <Cloud className="w-5 h-5 transition-transform group-hover:scale-110" />}
                             {theme === 'navy' && <Sun className="w-5 h-5 transition-transform group-hover:rotate-45" />}
                         </button>
                     </div>

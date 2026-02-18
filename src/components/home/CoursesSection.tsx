@@ -110,7 +110,7 @@ const CoursesSection: React.FC = () => {
                     <input
                         type="text"
                         placeholder="Search your favorite course..."
-                        className="w-full bg-slate-50 dark:bg-slate-900 navy:bg-[#051933] border border-slate-200 dark:border-slate-800 navy:border-indigo-900/50 rounded-full py-4 pl-12 pr-6 focus:ring-2 focus:ring-primary outline-none transition-all shadow-sm text-slate-900 dark:text-white navy:text-indigo-50 placeholder:navy:text-indigo-300/40"
+                        className="w-full bg-slate-50 dark:bg-slate-900 navy:bg-[#051933] border border-slate-200 dark:border-slate-800 navy:border-indigo-900/50 rounded-full py-4 pl-12 pr-6 focus:ring-2 focus:ring-primary outline-none transition-all shadow-sm text-slate-900 dark:text-white navy:text-indigo-50 placeholder:text-slate-400"
                     />
                     <div className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-primary text-white rounded-full">
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
